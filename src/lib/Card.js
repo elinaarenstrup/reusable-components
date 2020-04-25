@@ -45,12 +45,18 @@ const Content = styled.div`
   padding: 20px;
 `;
 
+const ChildrenContent = styled.div`
+  background: #f1f1f1;
+  padding: 20px;
+`;
+
 export const Card = ({
   title,
   secondaryText,
   thumbnailUrl,
   coverImage,
   className,
+  children,
 }) => (
   <Container className={className}>
     {coverImage && <CoverImage src={coverImage} />}
@@ -62,6 +68,8 @@ export const Card = ({
           {secondaryText && <SecondaryText>{secondaryText}</SecondaryText>}
         </div>
       </TitleBar>
+
+      {children && <ChildrenContent>{children}</ChildrenContent>}
     </Content>
   </Container>
 );

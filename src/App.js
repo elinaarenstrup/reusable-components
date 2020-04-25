@@ -14,8 +14,15 @@ export const App = () => {
         thumbnailUrl="https://www.fillmurray.com/100/100"
         title="Title"
         secondaryText="Secondary text"
-      />
+      >
+        <p>Child content here!</p>
+      </ThinnerCard>
+
       <Card title="Only title" secondaryText="Secondary text" />
+
+      <Card>
+        <h3>Hello from children</h3>
+      </Card>
     </AppContainer>
   );
 };
